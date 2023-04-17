@@ -21,12 +21,12 @@ Cílem projektu je procvičit si použití různých technik:
 - **CSS grid**
   - tento úkol má ukázat, jak díky CSS gridu můžeme nakódovat celou stránku s naprostým minimem kódu, protože se můžeme spolehnout na to, jak grid automaticky rozmisťuje prvky do mřížky, i když mu poskytneme jen minimum nezbytných informací
   - stačí totiž, když jednotlivým prvkům (odstavcům, nadpisům, citátům, obrázkům, apod.) **nastavíš, ve kterém sloupci (na které linii) mají v mřížce začínat a končit**. Nemusíš se starat o řádky. Grid bude prvky umisťovat postupně a bude si potřebné řádky přidávat sám.
-  - není potřeba do HTML nic přidávat - tentokrát zkus prostě stylovat přímo HTML značky (odstavcem, nadpisy, obrázky). Jen několik prvků, které to nezbtně potřebují, má přidanou CSS třídu.
+  - není potřeba do HTML nic přidávat - tentokrát zkus prostě stylovat přímo HTML značky (odstavcem, nadpisy, obrázky). Jen několik prvků, které to nezbytně potřebují, má přidanou CSS třídu.
 - **Responzivní webdesign**
   - v tomto úkolu jde především u ukázání možností gridu, takže když stránku nakóduješ jen v počítačové verzi podle grafického zadání, tak to úplně stačí
   - máš-li čas a chceš trénovat, zkus vymyslet, jak by mohla vypadat mobilní a tabletová verze tohoto zadání a nakóduj je
 - **CSS proměnné**
-  - chceš-li naučit sama něco navíc, přečti si komentář uvedený v CSS souboru a nastuduj si, jak použít tzv. *CSS proměnné* (*CSS variables*, nebo spávněji *CSS custom properties*)
+  - chceš-li naučit sama něco navíc, přečti si komentář uvedený v CSS souboru a nastuduj si, jak použít tzv. *CSS proměnné* (*CSS variables*, nebo spárvněji *CSS custom properties*)
 
 
 ## Grafické zadání

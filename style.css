@@ -66,3 +66,192 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+figure img {
+	width: 100%;
+}
+
+.blog {
+	display: grid;
+	column-gap: 40px;
+	grid-template-columns: [levy-start] 1fr [levy-end obsah-start] 4fr [obsah-end pravy-start] 2fr [pravy-end];
+}
+
+/* ! Rozmístění položek v gridu pro PC - kódováno vzhledem k zadání jako desktop-first */
+header, p, h2, footer { grid-column: obsah; }
+figure, blockquote { grid-column: 1 / 4; }
+.tip-vlevo { grid-column: levy; }
+.tip-vpravo { grid-column: pravy; }
+
+
+/* * Vlastnosti textu */
+h1 {
+	font-size: 80px;
+	margin-top: 20px;
+}
+
+h2 {
+	font-size: 60px;
+	margin-top: 45px;
+}
+
+h1, h2 {
+	color: var(--zelena);
+}
+
+p {
+	margin-bottom: 0;
+}
+
+.meta, figcaption, blockquote {
+	color: var(--seda);
+}
+
+.meta {
+	margin: 40px 0 0 0;
+}
+
+blockquote {
+	font-size: 40px;
+	text-align: center;
+	margin: 20px 40px 5px 40px;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	background-color: var(--limetka);
+	display: block;
+	width: 150px;
+	height: 3px;
+	margin: 25px auto;
+}
+
+a {
+	color: var(--oranzova);
+}
+
+footer {
+	color: var(--seda);
+	margin-top: 40px;
+}
+
+footer a {
+	color: var(--seda);
+}
+
+/* * Ostatní vlastnosti */
+figure {
+	margin: 50px 0 50px 0;
+}
+
+/* * Vlastnosti tipů */
+.tip {
+	padding: 20px;
+	background-color: var(--svetla);
+	color: var(--tmava);
+	align-self: center;
+}
+
+.tip p {
+	margin-top: 0;
+}
+
+.tip img {
+	margin-bottom: 10px;
+	max-width: 100%;  /* ! upraveno, aby obrázek nerozhodil sloupec */
+}
+
+.tip-vlevo {
+	border-right: 3px solid var(--zluta);
+}
+
+.tip-vpravo {
+	border-left: 3px solid var(--zluta);
+}
+
+
+/* ! VERZE PRO STŘEDNĚ VELKÉ DISPLEJE */
+@media screen and (max-width: 970px) {
+	.blog {
+		grid-template-columns: [obsah-start] 4fr [obsah-end pravy-start] 2fr [pravy-end];
+	}
+
+	p { grid-column: obsah; }
+	figure, blockquote, header, h2, footer { grid-column: 1 / 4; }
+	.tip-vlevo { grid-column: pravy; }
+	.tip-vpravo { grid-column: pravy; }
+
+
+	h1, h2, footer {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 65px;
+	}
+
+	h2 {
+		font-size: 55px;
+	}
+
+	blockquote {
+		font-size: 35px;
+	}
+
+	figure {
+		margin: 50px 0 40px 0;
+	}
+
+	.tip {
+		margin-top: 18px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tip img {
+		max-width: 50%;
+	}
+
+	.tip-vlevo {
+		border-left: 3px solid var(--zluta);
+		border-right: 0;
+	}
+}
+
+
+/* ! VERZE PRO NEJMENŠÍ DISPLEJE */
+@media screen and (max-width: 740px) {
+	.blog {
+		grid-template-columns: [obsah-start] 4fr [obsah-end];
+	}
+
+	p, figure, blockquote, header, h2, footer, .tip-vlevo, .tip-vpravo { grid-column: obsah; }
+
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		font-size: 50px;
+	}
+
+	blockquote {
+		font-size: 30px;
+	}
+
+	.tip {
+		flex-direction: row;
+		max-width: 60%;
+		margin: 33px auto 15px auto;
+		gap: 20px;
+	}
+
+	.tip img {
+		max-width: 30%;
+	}
+
+	figure {
+		margin: 40px 0 30px 0;
+	}
+}
